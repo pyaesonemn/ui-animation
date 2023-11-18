@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { DynamicBackground, Logo, NavWrapper } from ".";
+import { Logo, NavWrapper } from ".";
+import { DynamicBackground } from "./DynamicBackground";
 
 export const SecondSection = () => {
   return (
@@ -13,7 +14,7 @@ export const SecondSection = () => {
                 src={"/gifs/walking.webp"}
                 alt="walking"
                 fill={true}
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
               />
             </div>
           </div>

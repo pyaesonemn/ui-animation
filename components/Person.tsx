@@ -24,7 +24,13 @@ export const Person: FC<PersonProps> = ({
       className={cn("absolute w-full h-full", className)}
       ref={animate ? elementRef : null}
     >
-      <Image fill={true} alt={alt} src={src} objectFit="cover" quality={80} />
+      <Image
+        fill={true}
+        alt={alt}
+        src={src}
+        style={{ objectFit: "cover" }}
+        quality={80}
+      />
     </div>
   );
 };
