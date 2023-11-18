@@ -1,6 +1,7 @@
-import { useRef, useEffect } from "react";
+"use client";
+
+import { useRef } from "react";
 import { gsap } from "gsap";
-import { gsap as gsaptrial } from "gsap-trial";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap-trial/SplitText";
 
@@ -63,17 +64,29 @@ export const useTextAnimate: useTextAnimateProps = (from, to) => {
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(SplitText);
 
-  let mySplitText = new SplitText(elementRef.current, { type: "words,chars" });
-  let chars = mySplitText.chars;
-
-  gsap.from(chars, {
-    yPercent: 12,
-    stagger: 0.1,
-    ease: "power3.out",
-    duration: 0.6,
-    repeat: -1,
-    yoyo: true,
-  });
+  if (typeof document !== "undefined") {
+    let mySplitText = new SplitText(elementRef.current, {
+      type: "words,chars",
+    });
+    let chars = mySplitText?.chars;
+    gsap.from(chars, {
+      yPercent: 12,
+      stagger: 0.1,
+      ease: "power3.out",
+      duration: 0.6,
+      repeat: -1,
+      yoyo: true,
+    });
+  } else {
+    gsap.from(elementRef.current, {
+      yPercent: 12,
+      stagger: 0.1,
+      ease: "power3.out",
+      duration: 0.6,
+      repeat: -1,
+      yoyo: true,
+    });
+  }
 
   return elementRef;
 };

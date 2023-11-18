@@ -1,3 +1,5 @@
+"use client";
+
 import { useTextAnimate } from "@/hooks";
 import Image from "next/image";
 

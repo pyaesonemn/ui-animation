@@ -23,10 +23,9 @@ export const TravelingBlob: FC<TravelingBlobProps> = ({
   className,
   args,
 }) => {
-  const screenHeight = window.innerHeight;
   const animatedRef = useEndlessTravelAnimation(
     args.startX,
-    args.startY + screenHeight,
+    args.startY,
     args.endY,
     args.duration
   );
