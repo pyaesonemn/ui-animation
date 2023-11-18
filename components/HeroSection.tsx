@@ -1,10 +1,8 @@
 "use client";
 
-import { Person } from "@/components";
 import Image from "next/image";
 
 export const HeroSection = () => {
-  const screenWidth = window.innerWidth;
   return (
     <section className="relative w-full h-[100dvh] bg-red-500 overflow-hidden snap-start">
       {/* <Person
@@ -33,7 +31,7 @@ export const HeroSection = () => {
         className="bottom-[-28%] right-[10%]"
       /> */}
 
-      <Image
+      {/* <Image
         width={screenWidth > 768 ? screenWidth / 3 : screenWidth / 2}
         height={400}
         src={"/person/person_one.svg"}
@@ -64,7 +62,7 @@ export const HeroSection = () => {
         alt="Person One"
         objectFit="cover"
         className="absolute bottom-0 right-[70%]"
-      />
+      /> */}
     </section>
   );
 };

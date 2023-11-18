@@ -1,7 +1,5 @@
 export * from "./Logo";
 export * from "./Person";
-export * from "./BouncingDiv";
-export * from "./Bouncing";
 export * from "./HeroSection";
 export * from "./SecondSection";
 export * from "./DynamicBackground";
