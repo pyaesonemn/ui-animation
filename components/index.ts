@@ -3,6 +3,7 @@ export * from "./Person";
 export * from "./BouncingDiv";
 export * from "./Bouncing";
 export * from "./HeroSection";
-export * from "./BgLoopSection";
+export * from "./SecondSection";
 export * from "./DynamicBackground";
 export * from "./TravelingBlob";
+export * from "./ThirdSection";
