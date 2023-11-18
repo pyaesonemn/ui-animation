@@ -7,7 +7,8 @@ export const useEndlessTravelAnimation = (
   startX: number,
   startY: number,
   endY: number,
-  duration: number
+  duration: number,
+  delay?: number
 ) => {
   const elementRef = useRef(null);
   useEffect(() => {
@@ -20,6 +21,7 @@ export const useEndlessTravelAnimation = (
       // Animation
       const animation = gsap.to(element, {
         duration,
+        delay: delay || 0,
         y: endY,
         ease: "linear",
         onComplete: () => {

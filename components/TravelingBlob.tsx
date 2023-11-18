@@ -10,6 +10,7 @@ type Args = {
   startY: number;
   endY: number;
   duration: number;
+  delay?: number;
 };
 
 type TravelingBlobProps = {
@@ -27,7 +28,8 @@ export const TravelingBlob: FC<TravelingBlobProps> = ({
     args.startX,
     args.startY,
     args.endY,
-    args.duration
+    args.duration,
+    args.delay || 0
   );
   return (
     <div ref={animatedRef} className={cn(className)}>
