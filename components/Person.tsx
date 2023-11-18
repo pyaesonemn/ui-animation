@@ -1,30 +1,31 @@
+"use client";
+
+import { useBouncing } from "@/hooks";
 import { cn } from "@/utils";
 import Image from "next/image";
 import { FC } from "react";
 
 type PersonProps = {
   className?: string;
-  positionClass?: string;
+  alt: string;
   src: string;
-  width?: number;
-  height?: number;
 };
 
-export const Person: FC<PersonProps> = ({
-  src,
-  width = 500,
-  height = 500,
-  className,
-  positionClass,
-}) => {
+export const Person: FC<PersonProps> = ({ src, className, alt }) => {
+  const elementRef = useBouncing();
   return (
-    <div className={cn(className)}>
+    <div
+      className={cn("absolute w-auto max-w-full h-auto", className)}
+      ref={elementRef}
+    >
       <Image
+        width={1330}
+        height={1438}
+        sizes="100vw"
+        alt={alt}
         src={src}
-        alt="Person Two"
-        width={width}
-        height={height}
-        className={cn(positionClass)}
+        objectFit="fill"
+        quality={80}
       />
     </div>
   );
