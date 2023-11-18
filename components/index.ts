@@ -5,3 +5,5 @@ export * from "./SecondSection";
 export * from "./DynamicBackground";
 export * from "./TravelingBlob";
 export * from "./ThirdSection";
+export * from "./NavWrapper";
+export * from "./AnimatedText";
