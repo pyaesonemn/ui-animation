@@ -1,6 +1,4 @@
-"use client";
-
-import Image from "next/image";
+import { Person } from ".";
 
 export const HeroSection = () => {
   return (
@@ -29,18 +27,88 @@ export const HeroSection = () => {
         alt="Person Two"
         src="/person/person_two.svg"
         className="bottom-[-28%] right-[10%]"
+
       /> */}
 
+      <div className="w-fit ml-[-1rem] h-fit grid grid-cols-5 grid-rows-1">
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+      </div>
+      <div className="w-fit h-fit mt-[-25rem] ml-[-10rem] grid grid-cols-5 grid-flow-row">
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+      </div>
+      <div className="w-fit ml-[-1rem] mt-[-25rem] h-fit grid grid-cols-5 grid-rows-1">
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+      </div>
+      <div className="w-fit h-fit mt-[-25rem] ml-[-10rem] grid grid-cols-5 grid-flow-row">
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+        <div className="relative w-[30vw] h-[64vh] bg-transparent">
+          <Person alt="Person One" src="/person/person_one.svg" />
+        </div>
+      </div>
+
       {/* <Image
-        width={screenWidth > 768 ? screenWidth / 3 : screenWidth / 2}
+        width={screenWidth ? screenWidth / 3 : 500}
         height={400}
-        src={"/person/person_one.svg"}
+        src={"/person/person_two.svg"}
         alt="Person One"
         objectFit="cover"
         className="absolute bottom-0 right-[-20%]"
       />
       <Image
-        width={screenWidth > 768 ? screenWidth / 3 : screenWidth / 2}
+        width={screenWidth ? screenWidth / 3 : 500}
         height={400}
         src={"/person/person_one.svg"}
         alt="Person One"
@@ -48,7 +116,7 @@ export const HeroSection = () => {
         className="absolute bottom-0 right-[10%]"
       />
       <Image
-        width={screenWidth > 768 ? screenWidth / 3 : screenWidth / 2}
+        width={screenWidth ? screenWidth / 3 : 500}
         height={400}
         src={"/person/person_one.svg"}
         alt="Person One"
@@ -56,7 +124,7 @@ export const HeroSection = () => {
         className="absolute bottom-0 right-[40%]"
       />
       <Image
-        width={screenWidth > 768 ? screenWidth / 3 : screenWidth / 2}
+        width={screenWidth ? screenWidth / 3 : 500}
         height={400}
         src={"/person/person_one.svg"}
         alt="Person One"

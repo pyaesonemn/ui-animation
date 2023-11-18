@@ -1,10 +1,9 @@
 "use client";
 
-import { useTextAnimate } from "@/hooks";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 export const ThirdSection = () => {
-  const elementRef = useTextAnimate();
   return (
     <section className="relative w-full h-[100dvh] bg-blue-100 overflow-hidden snap-start">
       <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 justify-center items-center">
@@ -16,13 +15,16 @@ export const ThirdSection = () => {
             height={600}
           />
         </div>
-        <div
-          className="lg:order-2 order-1 text-start font-semibold tracking-[1rem] text-blue-800 w-full h-full justify-center text-xl items-center flex flex-col gap-y-1"
-          ref={elementRef}
-        >
-          <span>ふわふわの動物たちに、</span>
-          <span>囲まれて暮らしたい</span>
-          <span className="mt-8">ペットや動物が大好きなあなたへ</span>
+
+        <div className="lg:order-2 order-1 sm:px-0 px-5">
+          <Fade
+            cascade
+            className="text-start font-semibold tracking-[1rem] text-blue-800 w-full h-full justify-center text-base sm:text-xl items-center flex flex-col gap-y-1"
+          >
+            <span id="char">ふわふわの動物たちに、</span>
+            <span id="char">囲まれて暮らしたい</span>
+            <span className="mt-8">ペットや動物が大好きなあなたへ</span>
+          </Fade>
         </div>
       </div>
     </section>
