@@ -14,19 +14,8 @@ type PersonProps = {
 export const Person: FC<PersonProps> = ({ src, className, alt }) => {
   const elementRef = useBouncing();
   return (
-    <div
-      className={cn("absolute w-auto max-w-full h-auto", className)}
-      ref={elementRef}
-    >
-      <Image
-        width={1330}
-        height={1438}
-        sizes="100vw"
-        alt={alt}
-        src={src}
-        objectFit="fill"
-        quality={80}
-      />
+    <div className={cn("absolute w-full h-full", className)} ref={elementRef}>
+      <Image fill={true} alt={alt} src={src} objectFit="cover" quality={80} />
     </div>
   );
 };
