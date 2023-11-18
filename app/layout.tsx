@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav className="z-50 absolute w-full px-10 py-12">
+        {/* <nav className="z-50 absolute w-full px-10 py-12">
           <Logo className="text-blue-800 w-[45%]" />
-        </nav>
+        </nav> */}
         {children}
       </body>
     </html>
